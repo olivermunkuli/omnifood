@@ -209,6 +209,12 @@
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .section-meals {
@@ -221,6 +227,8 @@
 
 .meal-tags {
   margin: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
 }
 
 .tag {
@@ -249,6 +257,11 @@
   width: 100%;
 }
 
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 .meal-title {
   font-size: 2.4rem;
   color: #333;
@@ -274,5 +287,25 @@
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
+  color: #e67e22;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  height: 3rem;
+  width: 3rem;
   color: #e67e22;
 }
