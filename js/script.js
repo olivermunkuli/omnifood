@@ -19,6 +19,24 @@ btnNavEl.addEventListener("click", function () {
 
 ///////////////////////////////////////////////////////////
 // smooth scrolling animation
+const sectionHeroEl = document.querySelector(".section-hero");
+const observer = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+observer.observe(sectionHeroEl);
 
 const allLinksEls = document.querySelectorAll("a:link");
 
@@ -41,6 +59,9 @@ allLinksEls.forEach(function (link) {
     }
   });
 });
+
+///////////////////////////////////////////////////////////
+// Sticky navigation
 
 function checkFlexGap() {
   var flex = document.createElement("div");
